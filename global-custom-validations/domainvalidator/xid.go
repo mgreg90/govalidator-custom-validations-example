@@ -7,10 +7,7 @@ import (
 
 func validateXID(fl validator.FieldLevel) bool {
 	xidString := fl.Field().String()
+	_, err := xid.FromString(xidString)
 
-	if _, err := xid.FromString(xidString); err != nil {
-		return false
-	}
-
-	return true
+	return err != nil
 }

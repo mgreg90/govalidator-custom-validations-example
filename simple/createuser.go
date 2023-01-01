@@ -16,11 +16,11 @@ type User struct {
 	CreateUserInput
 }
 
-func CreateUser(input CreateUserInput) (error, *User) {
+func CreateUser(input CreateUserInput) (*User, error) {
 	if err := validator.New().Struct(input); err != nil {
-		return err, nil
+		return nil, err
 	}
 
 	// Call to repository to create user
-	return nil, &User{}
+	return &User{}, nil
 }

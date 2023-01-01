@@ -16,11 +16,11 @@ type User struct {
 	PhoneNumber         *string
 }
 
-func GetUser(input GetUserInput) (error, *User) {
+func GetUser(input GetUserInput) (*User, error) {
 	if err := domainvalidator.ValidateStruct(input); err != nil {
-		return err, nil
+		return nil, err
 	}
 
 	// Call to repository to get user
-	return nil, &User{}
+	return &User{}, nil
 }

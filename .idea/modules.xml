@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../dependency-injection-unit-test/.idea/dependency-injection-unit-test.iml" filepath="$PROJECT_DIR$/../dependency-injection-unit-test/.idea/dependency-injection-unit-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/govalidator-custom-validations.iml" filepath="$PROJECT_DIR$/.idea/govalidator-custom-validations.iml" />
     </modules>
   </component>

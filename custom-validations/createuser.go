@@ -18,13 +18,13 @@ type User struct {
 	CreateUserInput
 }
 
-func CreateUser(input CreateUserInput) (error, *User) {
+func CreateUser(input CreateUserInput) (*User, error) {
 	if err := input.validate(); err != nil {
-		return err, nil
+		return nil, err
 	}
 
 	// Call to repository to create user
-	return nil, &User{}
+	return &User{}, nil
 }
 
 func (i CreateUserInput) validate() error {
